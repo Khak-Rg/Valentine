@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Special Valentine ❤️</title>
+  <style>
+    /* Background Styling */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+      animation: backgroundPulse 3s infinite alternate;
+    }
+    @keyframes backgroundPulse {
+      0% { background-color: #ff9a9e; }
+      100% { background-color: #fad0c4; }
+    }
+
+    /* Container Styling */
+    .container {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #ff6b6b;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      color: #555;
+    }
+
+    img {
+      max-width: 300px;
+      border-radius: 15px;
+      margin: 15px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .yes {
+      background-color: #ff6b6b;
+      color: white;
+    }
+    .yes:hover {
+      background-color: #ff4a4a;
+      transform: scale(1.05);
+    }
+
+    .no {
+      background-color: #d1d1d1;
+      color: black;
+    }
+    .no:hover {
+      transform: scale(1.05);
+    }
+
+    /* Hidden animation for "No" button */
+    .no.move {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Will You Be My Valentine? 💕</h1>
+    <p>
+      You mean the world to me, and I can't imagine spending this Valentine's Day without you. <br>
+      Will you make me the happiest person by saying yes?
+    </p>
+    <img src="https://images.unsplash.com/photo-1518241353330-dcdfbca3c56d?auto=format&fit=crop&w=600&q=80" alt="Romantic Heart Image">
+    
+    <!-- Buttons -->
+    <button class="yes" onclick="sayYes()">Yes ❤️</button>
+    <button class="no" id="noBtn" onmouseover="moveNoButton()">No 😅</button>
+  </div>
+
+  <script>
+    // Function when "Yes" is clicked
+    function sayYes() {
+      alert("Yay! You just made my day! ❤️");
+    }
+
+    // Function to move the "No" button
+    function moveNoButton() {
+      const noButton = document.getElementById("noBtn");
+      noButton.style.position = "absolute";
+      noButton.style.top = `${Math.random() * 80 + 10}%`;
+      noButton.style.left = `${Math.random() * 80 + 10}%`;
+    }
+  </script>
+</body>
+</html>
